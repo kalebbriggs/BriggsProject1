@@ -8,7 +8,7 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the .yml file may be used to install only certain pieces of it, such as Filebeat.
 
-  - _TODO: Enter the playbook file._
+  -![Elk-install.yml](Ansible/Elk-install.yml)
 
 This document contains the following details:
 - Description of the Topology
@@ -28,18 +28,17 @@ Load balancing ensures that the application will be highly available, in additio
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the event logs and system metrics.
 
-- Filebeats can watch for log directories or specific log files
-- Metricbeats can be used to monitor the servers by collecting metrics from the system and services running on the server.
+
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.1   | Linux            |
-| Web-1    |          |            |                  |
-| Web-2    |          |            |                  |
-| Elk      |          |            |                  |
+| Jump Box | Gateway  | 10.0.0.4   | Linux            |
+| Web-1    | Webserver| 10.0.0.5   | Linux            |
+| Web-2    | Webserver| 10.0.0.7   | Linux            |
+| Elk      | Elkserver| 10.1.0.4   | Linux            |
 
 ### Access Policies
 
@@ -79,7 +78,9 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_
+
+- Web-1 (10.0.0.5)
+- Web-2 (10.0.0.7)
 
 We have installed the following Beats on these machines:
 
@@ -88,7 +89,9 @@ Metricbeat
 
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+
+- Filebeats can watch for log directories or specific log files
+- Metricbeats can be used to monitor the servers by collecting metrics from the system and services running on the server.
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
