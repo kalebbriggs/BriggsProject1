@@ -1,5 +1,4 @@
-3.	#!/bin/bash
-[Your solution script contents here]
+#!/bin/bash
 
 
 free -h > ~/backups/freemem/free_mem.txt
