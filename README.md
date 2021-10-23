@@ -106,7 +106,7 @@ SSH into the control node and follow the steps below:
 - Run the playbook, and navigate to http://[your.VM.IP]:5601/app/kibana to check that the installation worked as expected. 
 
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+### Downloading and updating the playbook
 
 If needing to download and run the playbook along with updating the files, the following commands need to be executed:
 
