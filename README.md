@@ -9,6 +9,10 @@ The files in this repository were used to configure the network depicted below.
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the .yml file may be used to install only certain pieces of it, such as Filebeat.
 
   - [Elk-install.yml](https://github.com/kalebbriggs/BriggsProject1/blob/main/Ansible/Elk-Install.yml)
+  - [Filebeat-install.yml](https://github.com/kalebbriggs/BriggsProject1/blob/main/Ansible/Filebeat-Install.yml)
+  - [Metricbeat-install.yml](https://github.com/kalebbriggs/BriggsProject1/blob/main/Ansible/Metricbeat-Install.yml)
+  - [Docker-install.yml](https://github.com/kalebbriggs/BriggsProject1/blob/main/Ansible/Docker-Install.yml)
+  - [hosts.yml](https://github.com/kalebbriggs/BriggsProject1/blob/main/Ansible/hosts.yml)
 
 This document contains the following details:
 - Description of the Topology
