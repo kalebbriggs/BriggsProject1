@@ -65,8 +65,7 @@ A summary of the access policies in place can be found in the table below.
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it helps save a lot of time but having the tasks automated with one command as opposed to running different commands or installing software on individual systems. 
 
 The playbook implements the following tasks:
 - Installs docker.io
@@ -108,3 +107,16 @@ SSH into the control node and follow the steps below:
 
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+
+If needing to download and run the playbook along with updating the files, the following commands need to be executed:
+
+-SSH into Jump Box
+- curl https://github.com/kalebbriggs/BriggsProject1/blob/main/Ansible/Docker-install.yml > /etc/ansible/Docker-install.yml
+- nano Docker-install.yml to check hosts and edit playbook if needed
+- nano /etc/ansible/hosts to add IPs and [hostnames]
+- curl https://github.com/kalebbriggs/BriggsProject1/blob/main/Ansible/Elk-Install.yml >/etc/ansible/Elk-install.yml
+- curl https://github.com/kalebbriggs/BriggsProject1/blob/main/Ansible/Filebeat_install.yml > /etc/ansible/Filebeat-install.yml
+- curl https://github.com/kalebbriggs/BriggsProject1/blob/main/Ansible/MetricBeat_install.yml > /etc/ansible/Metricbeat-install.yml
+- nano the install files to ensure the hostnames matches to the host name in your host file 
+- nano the config files to update the ip address in the files to your machines
+
